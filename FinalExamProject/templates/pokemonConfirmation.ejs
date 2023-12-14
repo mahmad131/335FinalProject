@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CMSC335 Pokedex</title>
+    <style>
+        .element {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f0f0;
+            float: left;
+            margin: 10px;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        hr {
+            margin-top: 20px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1><%- pkmnName %></h1>
+    <img src="<%- pkmnSprite %>" alt="Pokemon Image">
+    <div>
+        <div class="element">
+            <h2>Stats:</h2>
+            <%- pkmnStats %>
+        </div>
+        <div class="element">
+            <h2>Moves:</h2>
+            <%- pkmnMoves %>
+        </div>
+        <div class="element">
+            <h2>Types:</h2>
+            <%- pkmnTypes %>
+        </div>
+        <div class="element">
+            <h2>Abilities:</h2>
+            <%- pkmnAbilities %>
+        </div>
+        <div class="element">
+            <h2>Misc:</h2>
+            <%- pkmnMisc %>
+        </div>
+    </div>
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>
